@@ -1,18 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Fem</title>
-        <link rel="stylesheet" href="/css/style.css" />
-    </head>
-    <body>
-        </header>
-        <h1>Fem</h1>
-        </header>
-        <main>
-            <h3>Frontend Mentor</h3>
-<p>Build sites with Eleventy</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>j5</title>
+    <link rel="stylesheet" href="../css/home/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&amp;family=Ubuntu:wght@300;400&amp;display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header u-container">
+  <img
+    class="header__logo"
+    src="./images/logo.svg"
+    alt="Josiah's Portfolio - Home"
+  />
+  <input type="checkbox" id="toggle" />
+  <label for="toggle" class="hamburger">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </label>
+  <nav class="nav u-container">
+    <ul class="nav__items">
+      <li class="nav__item"><a class="nav__link" href="#0">Projects</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">Blogs</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">Contact</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">Credits</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero u-container">
+    <h1 class="hero__title">Josiah Mokobo Nyarega</h1>
+    <div class="address">
+      <p class="address__title">Front-end web developer</p>
+      <address class="address__address">Nairobi, Kenya</address>
+    </div>
+  </section>
+  <section class="projects u-container">
+    <h2 class="projects__title">Projects</h2>
+    <ul class="projects__items"><li class="projects__item">
+        <a
+          href="./challenges/countdown"
+          class="projects__link"
+          data-caption="countdown timer"
+          data-description="This will be a fun one! Your challenge is to build this countdown timer. There are lots of small CSS tests in the design as well. So it should keep you busy!"
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/cqs8urpg9sr4ufvyiw7n.jpg"
+              alt="countdown timer"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/stats-preview-card"
+          class="projects__link"
+          data-caption="stats preview"
+          data-description="This is a great small challenge to help get you used to building to a design. There&#39;s no JS in this project, so you&#39;ll be able to focus on your HTML &amp; CSS skills."
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/pnczwsvslfwimxcqjrwm.jpg"
+              alt="stats preview"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/three-column-card-component"
+          class="projects__link"
+          data-caption="3 Column Card Component"
+          data-description="This challenge is perfect if you&#39;re just getting started. The shift between the layouts will be a nice test if you&#39;re new to building responsive projects."
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ofrkupd8a9wh1wenvr8c.jpg"
+              alt="3 Column Card Component"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/faq-component"
+          class="projects__link"
+          data-caption="FAQ component"
+          data-description="In this challenge, you&#39;ll be building out an FAQ accordion. This is an extremely common front-end pattern, so it&#39;s a great opportunity to get some practice in!"
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ymtblmv8bbnpazgrfrx6.jpg"
+              alt="FAQ component"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/profile-component"
+          class="projects__link"
+          data-caption="profile component"
+          data-description="This is a perfect challenge to test your layout skills. The card layout doesn&#39;t shift, so it&#39;s also great for those that haven&#39;t dived into responsive websites yet!"
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/udlaqeyuqehspxb2zi9h.jpg"
+              alt="profile component"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/article-preview"
+          class="projects__link"
+          data-caption="article preview"
+          data-description="Practice your layout skills with this article preview component. There&#39;s lots of fun to be had playing around with animations for the sharing icons as well."
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/xjpdhdjod58zbaaw0fmo.jpg"
+              alt="article preview"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/bootcamp-testimonials"
+          class="projects__link"
+          data-caption="bootcamp testimonials"
+          data-description="This challenge will be a nice test if you&#39;re new to JavaScript. It&#39;s also a great opportunity to play around with content animations and transitions."
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/boizahiijgdyynt18v9d.jpg"
+              alt="bootcamp testimonials"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/signup-form"
+          class="projects__link"
+          data-caption="signup form"
+          data-description="Practice building out a sign-up form complete with client-side validation using JavaScript."
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/cbyamvcsyhwlvnlelr5n.jpg"
+              alt="signup form"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li><li class="projects__item">
+        <a
+          href="./challenges/single-price-component"
+          class="projects__link"
+          data-caption="price-component"
+          data-description="In this challenge, you will build out the pricing component to the designs provided. This is perfect for beginners and people who want to complete a smaller challenge."
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/etoajz7nokwmphl1jonw.jpg"
+              alt="price-component"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li></ul>
+  </section>
+</main>
 
-        </main>
-    </body>
+<footer>
+  J5
+  &copy; build with eleventy
+</footer>
+
+  </body>
 </html>

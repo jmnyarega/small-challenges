@@ -1,0 +1,20 @@
+@import '../shared/global';
+@import '../shared/abstract/fonts';
+@import '../shared/reset';
+@import '../shared/util';
+@import './header';
+@import './hamburger';
+@import './hero';
+@import './projects';
+
+body {
+    background: url(../../images/background-stars.svg);
+    background-color: hsl(204 , 22% , 15%);
+    color: hsl(204 , 22% , 80%);
+    font-family: $ff-default;
+
+    text-align: center;
+    @media (min-width: 60rem) {
+        text-align: initial;
+    }
+}

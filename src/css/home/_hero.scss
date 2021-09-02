@@ -1,0 +1,30 @@
+.hero { 
+    padding-block: 4rem;
+    display: grid;
+    gap: 2rem 0;
+
+    &__title {
+        font-family: $ff-alt;
+        line-height: 1;
+        font-weight: bold;
+        @media (min-width: 60rem) {
+            font-size: 3.5rem;
+            grid-area: name;
+            justify-self: center;
+        }
+    }
+
+    @media (min-width: 60rem) {
+        display: grid;
+        grid-template-areas: ". . address ."
+                            ". name name .";
+    }
+}
+
+.address {
+    @media (min-width: 60rem) {
+        font-size: 1.25rem;
+        text-align: right;
+        grid-area: address;
+    }
+}

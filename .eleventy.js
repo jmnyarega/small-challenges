@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/css/");
+  eleventyConfig.setTemplateFormats(["njk", "svg", "jpg"]);
   return {
     dir: {
       input: "src",

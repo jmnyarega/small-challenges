@@ -1,0 +1,60 @@
+<header class="header u-container">
+  <img
+    class="header__logo"
+    src="./images/logo.svg"
+    alt="Josiah's Portfolio - Home"
+  />
+  <input type="checkbox" id="toggle" />
+  <label for="toggle" class="hamburger">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </label>
+  <nav class="nav u-container">
+    <ul class="nav__items">
+      <li class="nav__item"><a class="nav__link" href="#0">Projects</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">Blogs</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">Contact</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">Credits</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="hero u-container">
+    <h1 class="hero__title">Josiah Mokobo Nyarega</h1>
+    <div class="address">
+      <p class="address__title">Front-end web developer</p>
+      <address class="address__address">Nairobi, Kenya</address>
+    </div>
+  </section>
+  <section class="projects u-container">
+    <h2 class="projects__title">Projects</h2>
+    <ul class="projects__items">
+      {%- for projects in links -%}
+      <li class="projects__item">
+        <a
+          href="{{ projects.value }}"
+          class="projects__link"
+          data-caption="{{ projects.name }}"
+          data-description="{{ projects.description }}"
+        >
+          <picture class="projects__picture">
+            <img
+              class="projects__img"
+              src="{{ projects.image }}"
+              alt="{{ projects.name }}"
+              width="100%"
+              height="300px"
+            />
+          </picture>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+</main>
+
+<footer>
+  {{ title }}
+  &copy; build with eleventy
+</footer>
