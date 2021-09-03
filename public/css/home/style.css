@@ -225,11 +225,9 @@ img:not([alt]) {
 .projects__title {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 1.8rem;
-  text-align: center;
   margin-bottom: 2rem;
   position: relative;
   width: max-content;
-  margin-inline: auto;
 }
 .projects__title::after {
   content: "";
@@ -240,13 +238,6 @@ img:not([alt]) {
   bottom: -5px;
   left: 0;
   right: 0;
-}
-.projects__item {
-  border-radius: 0.6rem;
-}
-.projects__link {
-  text-decoration: none;
-  color: inherit;
 }
 .projects__items {
   display: grid;
@@ -275,7 +266,7 @@ img:not([alt]) {
 }
 .project__img {
   object-fit: cover;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: exclusion;
   border-radius: 0.6rem 0.6rem 0 0;
 }
 .project__title {
