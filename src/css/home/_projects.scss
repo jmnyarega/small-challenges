@@ -23,44 +23,11 @@
         }
     }
 
-    &__link {
-        position: relative;
-        display: block;
-
-        &::after {
-            content: attr(data-caption);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: hsla(204, 22%, 10%, 0.9);
-            padding: 1rem;
-            border-radius: 0.6rem;
-
-            transition: all 250ms linear;
-        }
-
-        &:hover::after {
-            content: attr(data-description);
-            inset: 0;
-            transform: unset;
-            transform-origin: top;
-        }
-    }
-
     &__img {
-        object-fit: cover;
-        mix-blend-mode: multiply;
-        border-radius: 0.6rem;
-    }
 
-    &__items {
-        list-style: none;
     }
 
     &__item {
-        background-color: hsla(204, 22%, 75%, 1);
-        width: 100%;
         border-radius: 0.6rem;
     }
 
@@ -71,9 +38,77 @@
 
     &__items {
         display: grid;
+        justify-content: center;
         gap: 1.5rem;
         @media (min-width: 45rem) {
             grid-template-columns: repeat(2, 1fr);
         }
+        @media (min-width: 60rem) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.project {
+    max-width: 50ch;
+    box-shadow: 0 0 10px 5px hsla(204, 22%, 10%, 0.5);
+    justify-self: center;
+    border-radius: 0.6rem;
+
+    &__content, &__cta, &__tags {
+        padding: 1.5rem;
+    }
+
+    &__img {
+        object-fit: cover;
+        mix-blend-mode: luminosity;
+        border-radius: 0.6rem 0.6rem 0 0;
+    }
+
+    &__title {
+        font-family: $ff-alt;
+        text-transform: capitalize;
+        line-height: 1;
+        font-size: 2rem;
+    }
+
+    &__description {
+        margin-top: 1rem;
+        min-height: 5rem;
+    }
+
+    &__cta {
+        margin-bottom: auto;
+        display: flex;
+        justify-content: space-between;
+        a {
+            outline: none;
+            border: 1px solid transparent;
+            border-radius: 0.5rem;
+
+            text-decoration: none;
+            text-transform: capitalize;
+            font: inherit;
+            color: inherit;
+            background-color: hsla(204, 22%, 30%, 1);
+
+            padding: 0.5em 1rem;
+
+            &:hover, &:focus {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    &__tags {
+        display: flex;
+        column-gap: 1rem;
+    }
+
+     &__tag {
+        background-color: hsla(204, 22%, 80%, 0.5);
+        padding: 0.25em 0.8em;
+        font-size: 0.8rem;
+        border-radius: 0.5rem;
     }
 }

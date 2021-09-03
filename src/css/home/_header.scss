@@ -48,6 +48,7 @@
     &__link {
         text-decoration: none;
         font-family: $ff-alt;
+        outline: none;
         font-weight: bold;
         color: inherit;
         text-transform: uppercase;
@@ -64,7 +65,7 @@
             right: 100%;
             transition: all 350ms linear;
         }
-        &:hover::after {
+        &:hover::after, &:focus::after {
             left: 0;
             right: 0;
         }

@@ -132,6 +132,7 @@ img:not([alt]) {
 .nav__link {
   text-decoration: none;
   font-family: "Open Sans Condensed", sans-serif;
+  outline: none;
   font-weight: bold;
   color: inherit;
   text-transform: uppercase;
@@ -147,7 +148,7 @@ img:not([alt]) {
   right: 100%;
   transition: all 350ms linear;
 }
-.nav__link:hover::after {
+.nav__link:hover::after, .nav__link:focus::after {
   left: 0;
   right: 0;
 }
@@ -240,38 +241,7 @@ img:not([alt]) {
   left: 0;
   right: 0;
 }
-.projects__link {
-  position: relative;
-  display: block;
-}
-.projects__link::after {
-  content: attr(data-caption);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(20, 27, 31, 0.9);
-  padding: 1rem;
-  border-radius: 0.6rem;
-  transition: all 250ms linear;
-}
-.projects__link:hover::after {
-  content: attr(data-description);
-  inset: 0;
-  transform: unset;
-  transform-origin: top;
-}
-.projects__img {
-  object-fit: cover;
-  mix-blend-mode: multiply;
-  border-radius: 0.6rem;
-}
-.projects__items {
-  list-style: none;
-}
 .projects__item {
-  background-color: #b1c2cd;
-  width: 100%;
   border-radius: 0.6rem;
 }
 .projects__link {
@@ -280,12 +250,72 @@ img:not([alt]) {
 }
 .projects__items {
   display: grid;
+  justify-content: center;
   gap: 1.5rem;
 }
 @media (min-width: 45rem) {
   .projects__items {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+@media (min-width: 60rem) {
+  .projects__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project {
+  max-width: 50ch;
+  box-shadow: 0 0 10px 5px rgba(20, 27, 31, 0.5);
+  justify-self: center;
+  border-radius: 0.6rem;
+}
+.project__content, .project__cta, .project__tags {
+  padding: 1.5rem;
+}
+.project__img {
+  object-fit: cover;
+  mix-blend-mode: luminosity;
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+.project__title {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: capitalize;
+  line-height: 1;
+  font-size: 2rem;
+}
+.project__description {
+  margin-top: 1rem;
+  min-height: 5rem;
+}
+.project__cta {
+  margin-bottom: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.project__cta a {
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  font: inherit;
+  color: inherit;
+  background-color: #3c505d;
+  padding: 0.5em 1rem;
+}
+.project__cta a:hover, .project__cta a:focus {
+  opacity: 0.5;
+}
+.project__tags {
+  display: flex;
+  column-gap: 1rem;
+}
+.project__tag {
+  background-color: rgba(193, 206, 215, 0.5);
+  padding: 0.25em 0.8em;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
 }
 
 body {

@@ -12,10 +12,12 @@
   </label>
   <nav class="nav u-container">
     <ul class="nav__items">
-      <li class="nav__item"><a class="nav__link" href="#0">Projects</a></li>
-      <li class="nav__item"><a class="nav__link" href="#0">Blogs</a></li>
-      <li class="nav__item"><a class="nav__link" href="#0">Contact</a></li>
-      <li class="nav__item"><a class="nav__link" href="#0">Credits</a></li>
+      <li class="nav__item">
+        <a class="nav__link" href="#projets">projects</a>
+      </li>
+      <li class="nav__item"><a class="nav__link" href="#0">blogs</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">contact</a></li>
+      <li class="nav__item"><a class="nav__link" href="#0">credits</a></li>
     </ul>
   </nav>
 </header>
@@ -27,27 +29,32 @@
       <address class="address__address">Nairobi, Kenya</address>
     </div>
   </section>
-  <section class="projects u-container">
+  <section class="projects u-container" id="projects">
     <h2 class="projects__title">Projects</h2>
     <ul class="projects__items">
-      {%- for projects in links -%}
-      <li class="projects__item">
-        <a
-          href="{{ projects.value }}"
-          class="projects__link"
-          data-caption="{{ projects.name }}"
-          data-description="{{ projects.description }}"
-        >
-          <picture class="projects__picture">
-            <img
-              class="projects__img"
-              src="{{ projects.image }}"
-              alt="{{ projects.name }}"
-              width="100%"
-              height="300px"
-            />
-          </picture>
-        </a>
+      {%- for project in links -%}
+      <li class="projects__item project">
+        <img
+          src="{{ project.image }}"
+          alt="{{ project.name }}"
+          class="project__img"
+        />
+
+        <div class="project__content">
+          <h3 class="project__title">{{ project.name }}</h3>
+          <p class="project__description">{{ project.description }}</p>
+        </div>
+
+        <div class="project__tags">
+          {%- for tag in project.tags -%}
+          <span class="project__tag">{{ tag }}</span>
+          {%- endfor -%}
+        </div>
+
+        <div class="project__cta">
+          <a href="{{ project.link }}" class="project__open">view project</a>
+          <a href="{{ project.code }}" class="project__open">github</a>
+        </div>
       </li>
       {%- endfor -%}
     </ul>
