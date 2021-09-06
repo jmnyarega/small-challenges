@@ -5,12 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>stats-preview-card</title>
-    <link rel="stylesheet" href="" />
+    <link rel="icon" href="./images/favicon-32x32.png" type="image/png" />
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Lexend+Deca&amp;display=swap" rel="stylesheet" />
   </head>
   <body>
-    
+    <main>
+  <div class="card">
+    <picture class="card__img">
+      <source
+        media="(min-width: 63rem)"
+        srcset="./images/image-header-desktop.jpg"
+        aria-hidden="true"
+      />
+      <img src="./images/image-header-mobile.jpg" alt="" aria-hidden="true" />
+    </picture>
+    <div class="card__content">
+      <h1 class="card__title">
+        Get <span class="-accent"> insights </span>that help your business grow.
+      </h1>
+      <p class="card__text">
+        Discover the benefits of data analytics and make better decisions
+        regarding revenue, customer experience,and overall efficiency.
+      </p>
+      <div class="card__stats stats"><div class="stat">
+          <strong class="stats__value">10k+</strong>
+          <p class="stats__header">companies</p>
+        </div><div class="stat">
+          <strong class="stats__value">314</strong>
+          <p class="stats__header">templates</p>
+        </div><div class="stat">
+          <strong class="stats__value">12M+</strong>
+          <p class="stats__header">queries</p>
+        </div></div>
+    </div>
+  </div>
+</main>
+
   </body>
 </html>
