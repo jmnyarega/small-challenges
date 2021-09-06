@@ -96,13 +96,15 @@ body {
       flex-direction: row-reverse;
       padding-bottom: 0; } }
   .card__img {
-    position: relative; }
+    position: relative;
+    isolation: isolate; }
     .card__img::after {
       content: "";
       position: absolute;
       inset: 0;
       background-color: #aa5cdb;
-      mix-blend-mode: multiply; }
+      mix-blend-mode: multiply;
+      opacity: 0.9; }
   .card__content {
     padding-inline: 2rem; }
   .card__title {

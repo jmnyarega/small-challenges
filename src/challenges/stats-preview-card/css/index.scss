@@ -45,6 +45,7 @@ body {
 
     &__img {
         position: relative;
+        isolation: isolate;
         &::after {
             content: "";
             position: absolute;
@@ -52,6 +53,7 @@ body {
 
             background-color: $soft-violet;
             mix-blend-mode: multiply;
+            opacity: 0.9;
         }
     }
 
