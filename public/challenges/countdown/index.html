@@ -4,26 +4,62 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>asdasd</title>
+    <title>countdown</title>
     <link rel="icon" href="" type="image/png" />
-    <link rel="stylesheet" href="../../css/countdown/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&amp;display=swap" rel="stylesheet" />
   </head>
   <body>
-    
-</header>
-  <h1>asdasd</h1>
-</header>
-<main>
-    countdown
-</main>
+    <main>
+  <section class="countdown">
+    <h1 class="countdown__title">We're launching soon</h1>
 
-<footer>
-  asdasd
-  &copy; build with eleventy
+    <div class="countdown__container">
+      <div is="countdown-element">
+        <p class="countdown__value" slot="value">04</p>
+        <span class="countdown__label" slot="name"> days </span>
+      </div>
+
+      <div is="countdown-element">
+        <p class="countdown__value" slot="value">03</p>
+        <span class="countdown__label" slot="name"> hours </span>
+      </div>
+
+      <div is="countdown-element">
+        <p class="countdown__value" slot="value">11</p>
+        <span class="countdown__label" slot="name"> minutes </span>
+      </div>
+
+      <div is="countdown-element">
+        <p class="countdown__value" slot="value">08</p>
+        <span class="countdown__label" slot="name"> seconds </span>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <ul class="footer__social social">
+    <li class="social__icon">
+      <a class="social__link" href="#0">
+        <img src="./images/icon-facebook.svg" alt="" aria-hidden="true" />
+      </a>
+    </li>
+    <li class="social__icon">
+      <a class="social__link" href="#0">
+        <img src="./images/icon-pinterest.svg" alt="" aria-hidden="true" />
+      </a>
+    </li>
+    <li class="social__icon">
+      <a class="social__link" href="#0">
+        <img src="./images/icon-instagram.svg" alt="" aria-hidden="true" />
+      </a>
+    </li>
+  </ul>
 </footer>
+
+<script src="./js/index.js"></script>
 
   </body>
 </html>

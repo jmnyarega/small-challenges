@@ -1,0 +1,94 @@
+@import "../../../css/shared/reset";
+@import "../../../css/shared/abstract/breakpoints";
+@import "../../../css/shared/util";
+
+$grayish-blue: hsl(237, 18%, 59%); 
+$soft-red: hsl(345, 95%, 68%); 
+$white: hsl(0, 0%, 100%); 
+$dark-desaturated-blue: hsl(236, 21%, 26%); 
+$very-dark-blue: hsl(235, 16%, 14%); 
+$very-darker-blue: hsl(234, 17%, 12%);
+$black: hsl(0, 0%, 0%);
+
+$ff-default: 'Red Hat Text', sans-serif;
+
+body {
+    background-color: $very-dark-blue;
+    font-family: $ff-default;
+
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
+        background-size: 100% 25%;
+        background-position: top left, bottom left;
+        background-repeat: repeat, no-repeat;
+
+        @media (min-width: map-get($breakpoints, "md")) {
+            background-size: contain;
+        }
+    }
+}
+
+.countdown {
+    text-align: center;
+    color: $white;
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        letter-spacing: 0.38375rem;
+        font-weight: bold;
+        max-width: 25ch;
+        margin-inline: auto;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        margin-top: 5rem;
+        color: $soft-red;
+    }
+
+    &__value {
+        font-size: 3rem;
+        @media (min-width: 36rem) {
+            font-size: 6rem;
+        }
+    }
+
+    &__label {
+        display: block;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        color: $dark-desaturated-blue;
+    }
+}
+
+.social {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    margin-bottom: auto;
+
+    &__icon {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+}
