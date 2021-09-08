@@ -82,7 +82,8 @@ body {
     position: absolute;
     inset: 0;
     background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
-    background-size: 100% 25%;
+    background-size: 100% 20%;
+    background-blend-mode: multiply;
     background-position: top left, bottom left;
     background-repeat: repeat, no-repeat; }
     @media (min-width: 48rem) {
@@ -99,6 +100,10 @@ body {
     font-weight: bold;
     max-width: 25ch;
     margin-inline: auto; }
+    @media (min-width: 36rem) {
+      .countdown__title {
+        max-width: initial;
+        font-size: 1.375rem; } }
   .countdown__container {
     display: flex;
     justify-content: center;
@@ -108,7 +113,7 @@ body {
     margin-top: 5rem;
     color: #fb6087; }
   .countdown__value {
-    font-size: 3rem; }
+    font-size: 2.25rem; }
     @media (min-width: 36rem) {
       .countdown__value {
         font-size: 6rem; } }
@@ -116,7 +121,39 @@ body {
     display: block;
     margin-top: 1rem;
     text-transform: uppercase;
-    color: #343650; }
+    font-size: 0.4375rem;
+    color: #8486a9; }
+    @media (min-width: 36rem) {
+      .countdown__label {
+        font-size: 0.875rem; } }
+
+.box {
+  background: black;
+  box-shadow: 0 7px 0 0 black;
+  min-width: 70px;
+  isolation: isolate;
+  border-radius: 1rem;
+  position: relative; }
+
+@media (min-width: 36rem) {
+  .box {
+    min-width: 15ch; } }
+
+.box::after, .box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1; }
+
+.box::after {
+  bottom: 50%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #343650; }
+
+.box::before {
+  top: 50%;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: #343650; }
 
 .social {
   position: absolute;
