@@ -83,42 +83,6 @@ body {
     }
 }
 
- .box {
-    background: black;
-    box-shadow: 0 7px 0 0 hsla(0deg, 0%, 0%, 50%);
-    min-width: 70px;
-    isolation: isolate;
-    border-radius: 1rem;
-
-    position: relative;
-  }
-
-    @media (min-width: 36rem) {
-      .box {
-        min-width: 15ch;
-      }
-    }
-
-.box::after, .box::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-}
-
-.box::after {
-    bottom: 50%;
-    border-radius: 0.5rem 0.5rem 0 0;
-    background-color: hsla(236, 21%, 26%, 87%);
-}
-
-.box::before {
-    top: 50%;
-    border-radius: 0 0 0.5rem 0.5rem;
-    background-color: hsl(236, 21%, 26%);
-}
-
 .social {
     position: absolute;
     bottom: 3rem;

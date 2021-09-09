@@ -2,36 +2,66 @@ const template = document.createElement("template");
 template.innerHTML = `
     <style>
        .box {
-          box-shadow: 0 7px 0 0 hsla(0deg, 0%, 0%, 50%);
+          --black: hsla(0deg, 0%, 0%, 50%);
+          --hue: 236;
+          --saturation: 21%;
+          --lightness: 26%;
+          --alpha: 75%;
+
+          box-shadow: 0 7px var(--black);
           min-width: 2.7rem;
           border-radius: 0.5rem;
           position: relative;
+          padding: 1rem;
         }
 
           @media (min-width: 36rem) {
             .box {
               min-width: 15ch;
+              padding: 0.5rem;
             }
           }
 
       .box::after, .box::before {
-          content: "";
+          --size: 0.375rem;
 
+          content: "";
           position: absolute;
           inset: 0;
           z-index: -1;
       }
+          @media (min-width: 36rem) {
+            .box::after, .box::before {
+              --size: 0.75rem;
+            }
+          }
 
       .box::after {
           bottom: 50%;
           border-radius: 0.5rem 0.5rem 0 0;
-          background-color: hsla(236, 21%, 26%, 75%);
+
+          background: radial-gradient(circle at 100% 100%, var(--black) var(--size), transparent 0),
+                      radial-gradient(circle at 0 100%, var(--black) var(--size), transparent 0);
+          background-color: hsla(
+            var(--hue),
+            var(--saturation),
+            var(--lightness),
+            var(--alpha)
+          );
       }
 
       .box::before {
           top: 50%;
           border-radius: 0 0 0.5rem 0.5rem;
-          background-color: hsl(236, 21%, 26%);
+
+          background: radial-gradient(circle at 0 0, var(--black) var(--size), transparent 0),
+            radial-gradient(circle at 100% 0, var(--black) var(--size), transparent 0);
+
+          background-color: hsl(
+            var(--hue),
+            var(--saturation),
+            var(--lightness)
+          );
       }
 
     </style>
@@ -45,8 +75,10 @@ template.innerHTML = `
 class CountdownElement extends HTMLDivElement {
   days = 1;
   hours = 23;
-  mins = 58;
-  secs = 40;
+  mins = 30;
+  secs = 00;
+ 
+  intervals = [];
 
   constructor() {
     super(); // correct prototype chain is established.
@@ -55,7 +87,7 @@ class CountdownElement extends HTMLDivElement {
   }
 
   connectedCallback() {
-    this.start();
+      this.intervals.push(this.start());
   }
 
   disconnectedCallback() {
@@ -86,6 +118,7 @@ class CountdownElement extends HTMLDivElement {
       this.days -= 1;
       this.hours = 0;
     }
+    this.stop(this.intervals);
     this.updateTimer();
   };
 
