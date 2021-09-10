@@ -20,18 +20,18 @@ body {
     display: grid;
     place-items: center;
 
-    &::before {
+    &::after, &::before {
         content: "";
         position: absolute;
         inset: 0;
+    }
+
+    &::before {
         background: linear-gradient($very-darker-blue, #2F2439);
         opacity: 0.6;
     }
 
     &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
         background-image: url(../images/bg-stars.svg),
                           url(../images/pattern-hills.svg);
         background-size: 100% 20%;
@@ -108,15 +108,13 @@ body {
         list-style: none;
     }
 
-    &_facebook:hover {
-            filter: url(../images/icon-facebook.svg#flood1);
-        }
-
     &__link {
         text-decoration: none;
+        outline: none;
+        &:hover .social__img,
+        &:focus .social__img {
+            fill: $soft-red;
+        }
     }
 
-    &__img:hover {
-        fill: $soft-red;
-    }
 }

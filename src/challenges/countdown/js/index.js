@@ -6,7 +6,7 @@ template.innerHTML = `
           --hue: 236;
           --saturation: 21%;
           --lightness: 26%;
-          --alpha: 75%;
+          --alpha: 50%;
 
           box-shadow: 0 7px var(--black);
           min-width: 2.7rem;
