@@ -73,10 +73,10 @@ template.innerHTML = `
 `;
 
 class CountdownElement extends HTMLDivElement {
-  days = 1;
+  days = 08;
   hours = 23;
-  mins = 30;
-  secs = 00;
+  mins = 55;
+  secs = 41;
  
   intervals = [];
 

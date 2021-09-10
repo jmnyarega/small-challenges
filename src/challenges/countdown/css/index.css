@@ -77,6 +77,12 @@ body {
   position: relative;
   display: grid;
   place-items: center; }
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#191a24, #2F2439);
+    opacity: 0.6; }
   body::after {
     content: "";
     position: absolute;
@@ -139,5 +145,9 @@ body {
   margin-bottom: auto; }
   .social__icon {
     list-style: none; }
+  .social_facebook:hover {
+    filter: url(../images/icon-facebook.svg#flood1); }
   .social__link {
     text-decoration: none; }
+  .social__img:hover {
+    fill: #fb6087; }
