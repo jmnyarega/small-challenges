@@ -262,6 +262,8 @@ img:not([alt]) {
 }
 .project__img {
   object-fit: cover;
+  max-height: 12rem;
+  width: 100%;
   mix-blend-mode: exclusion;
   border-radius: 0.6rem 0.6rem 0 0;
 }
