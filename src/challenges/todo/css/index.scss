@@ -1,7 +1,8 @@
 $ff-default: 'Josefin Sans', sans-serif;
 
 $bright-blue: hsl(220, 98%, 61%); 
-$background-gradient: linear-gradient(hsl(192, 100%, 67%) to hsl(280, 87%, 65%)); 
+$background-gradient-1: hsl(192, 100%, 67%);
+$background-gradient-2: hsl(280, 87%, 65%);
 
 $white: hsl(0, 0%, 100%);
 
@@ -22,6 +23,7 @@ $very-dark-grayish-blue: hsl(237, 14%, 26%);
 @import '../../../css/shared/reset';
 @import './components/switch';
 @import './components/input';
+@import './components/list-items';
 @import './utils';
 
 body {
@@ -31,7 +33,7 @@ body {
     &::after, &::before {
         content: "";
         position: absolute;
-        inset: 0 0 40% 0;
+        inset: 0 0 58% 0;
         z-index: -1;
     }
 
@@ -44,7 +46,7 @@ body {
     }
 
     &::before {
-        background-color: $background-gradient;
+        background: linear-gradient($background-gradient-1, $background-gradient-2);
         mix-blend-mode: multiply;
     }
 }
@@ -56,7 +58,7 @@ body {
     flex-direction: row;
     color: $white;
 
-    margin-top: 3rem;
+    margin-block: 3rem;
 
     &__title {
         font-size: 2rem;

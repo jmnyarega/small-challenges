@@ -1,14 +1,27 @@
-.input {
+.list {
     margin-top: 1.5rem;
-
     background-color: $white;
-    height: 3rem;
     border-radius: 0.5rem;
-    overflow: hidden;
-    border: 1px solid transparent;
+    padding: 1.1875rem;
+    box-shadow: 0 5px 5px 1px  rgba($color: #000000, $alpha: 0.3);
 
-    &__form  {
+    input { display: none }
+
+    &__items {
+        list-style: none;
+    }
+
+    &__item {
         display: flex;
+        align-items: center;
+    }
+
+    &__item + &__item {
+        border-top: 1px solid $light-grayish-blue;
+    }
+
+    &__delete {
+        margin-left: auto;
     }
 
     &__check {
@@ -26,7 +39,7 @@
         justify-content: center;
     }
 
-    #completed {
+    input[type=checkbox] {
         position: absolute;
         z-index: -1;
         top: 5rem;
@@ -45,19 +58,4 @@
         }
 
     }
-
-    &__item {
-        outline: none;
-        border: 1px solid transparent;
-        flex-grow: 1;
-
-        &::placeholder {
-            color: $dark-grayish-blue;
-        }
-    }
-
-    &:focus-within {
-        border: 1px dotted red;
-    }
 }
-

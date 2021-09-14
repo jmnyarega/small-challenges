@@ -1,5 +1,6 @@
-const template = document.createElement("template");
-template.innerHTML = `
+try {
+  const template = document.createElement("template");
+  template.innerHTML = `
     <style>
        .box {
           --black: hsla(0deg, 0%, 0%, 50%);
@@ -72,72 +73,76 @@ template.innerHTML = `
     <slot name="name">day</slot>
 `;
 
-class CountdownElement extends HTMLDivElement {
-  days = 08;
-  hours = 23;
-  mins = 55;
-  secs = 41;
- 
-  intervals = [];
+  class CountdownElement extends HTMLDivElement {
+    days = 08;
+    hours = 23;
+    mins = 55;
+    secs = 41;
 
-  constructor() {
-    super(); // correct prototype chain is established.
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    shadowRoot.appendChild(template.content.cloneNode(true));
-  }
+    intervals = [];
 
-  connectedCallback() {
+    constructor() {
+      super(); // correct prototype chain is established.
+      const shadowRoot = this.attachShadow({ mode: "open" });
+      shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
+    connectedCallback() {
       this.intervals.push(this.start());
+    }
+
+    disconnectedCallback() {
+      this.stop(this.start());
+    }
+
+    start = () => setInterval(this.countdownHandler, 1000);
+
+    // I assume no one will give me negative numbers 😄
+    isDone = () => !(this.secs || this.mins || this.hours || this.days);
+
+    stop = (handler) => this.isDone() && clearInterval(handler);
+
+    countdownHandler = () => {
+      this.secs += 1;
+
+      if (this.secs === 59) {
+        this.mins += 1;
+        this.secs = 0;
+      }
+
+      if (this.mins === 59) {
+        this.hours += 1;
+        this.mins = 0;
+      }
+
+      if (this.hours === 24) {
+        this.days -= 1;
+        this.hours = 0;
+      }
+      this.stop(this.intervals);
+      this.updateTimer();
+    };
+
+    updateTimer = () => {
+      const el = document.querySelectorAll(".countdown__value");
+      const d = el[0];
+      const h = el[1];
+      const m = el[2];
+      const s = el[3];
+      s.innerText = padWithZero(this.secs);
+      m.innerText = padWithZero(this.mins);
+      h.innerText = padWithZero(this.hours);
+      d.innerText = padWithZero(this.days);
+    };
   }
 
-  disconnectedCallback() {
-    this.stop(this.start());
-  }
-
-  start = () => setInterval(this.countdownHandler, 1000);
-
-  // I assume no one will give me negative numbers 😄
-  isDone = () => !(this.secs || this.mins || this.hours || this.days);
-
-  stop = (handler) => this.isDone() && clearInterval(handler);
-
-  countdownHandler = () => {
-    this.secs += 1;
-
-    if (this.secs === 59) {
-      this.mins += 1;
-      this.secs = 0;
-    }
-
-    if (this.mins === 59) {
-      this.hours += 1;
-      this.mins = 0;
-    }
-
-    if (this.hours === 24) {
-      this.days -= 1;
-      this.hours = 0;
-    }
-    this.stop(this.intervals);
-    this.updateTimer();
-  };
-
-  updateTimer = () => {
-    const el = document.querySelectorAll(".countdown__value");
-    const d = el[0];
-    const h = el[1];
-    const m = el[2];
-    const s = el[3];
-    s.innerText = padWithZero(this.secs);
-    m.innerText = padWithZero(this.mins);
-    h.innerText = padWithZero(this.hours);
-    d.innerText = padWithZero(this.days);
-  };
+  customElements.define("countdown-element", CountdownElement, {
+    extends: "div",
+  });
+} catch(error) {
+  console.log("You are not running the app on the browser");
+  doc = global;
 }
-
-customElements.define("countdown-element", CountdownElement, {
-  extends: "div",
-});
 
 // helpers
 function padWithZero(num) {
