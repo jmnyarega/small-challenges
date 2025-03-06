@@ -9,7 +9,7 @@
         "build:sass": "sass  --no-source-map src/css:public/css",
         "build:eleventy": "eleventy",
         "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-        "start": "npx npm-run-all build:sass --parallel watch:*",
+        "start": "npm-run-all build:sass --parallel watch:*",
         "build": "npx npm-run-all build:sass build:eleventy",
         "deploy": "npx npm-run-all build:sass build:eleventy & netlify deploy --prod"
     },
@@ -24,7 +24,7 @@
         "url": "https://github.com/jmnyarega/small-challenges/issues"
     },
     "homepage": "https://github.com/jmnyarega/small-challenges#readme",
-    "dependencies": {
+    "devDependencies": {
         "@11ty/eleventy": "^3.0.0",
         "autoprefixer": "^10.4.21",
         "cross-env": "^7.0.3",
