@@ -26,7 +26,7 @@
   <section class="hero u-container">
     <h1 class="hero__title">Josiah Mokobo Nyarega</h1>
     <div class="address">
-      <p class="address__title">Front-end web developer</p>
+      <p class="address__title">Full stack developer</p>
       <address class="address__address">Nairobi, Kenya</address>
     </div>
   </section>
@@ -53,8 +53,12 @@
         </div>
 
         <div class="project__cta">
-          <a href="{{ project.value }}" class="project__open">view project</a>
-          <a href="{{ project.code }}" class="project__open">github</a>
+          {% if(project.value) %}
+              <a target="_blank" href="{{ project.value }}" class="project__open">view project</a>
+          {% endif %}
+          {% if(project.code) %}
+              <a target="_blank" href="{{ project.code }}" class="project__open">github</a>
+          {% endif %}
         </div>
       </li>
       {%- endfor -%}

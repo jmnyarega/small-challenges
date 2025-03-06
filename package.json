@@ -1,30 +1,37 @@
 {
-  "name": "11ty-sass-skeleton",
-  "version": "1.2.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "watch:sass": "sass  --no-source-map --watch src/css:public/css",
-    "watch:eleventy": "eleventy --serve",
-    "build:sass": "sass  --no-source-map src/css:public/css",
-    "build:eleventy": "eleventy",
-    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy",
-    "deploy": "npm-run-all build:sass build:eleventy & netlify deploy --prod"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "autoprefixer": "^10.3.1",
-    "cross-env": "^7.0.3",
-    "cssnano": "^5.0.7",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
-    "sass": "^1.37.5"
-  },
-  "browserslist": [
-    "last 2 versions"
-  ]
+    "name": "portifolio",
+    "version": "1.0.0",
+    "description": "The wesbite contains all of my work that I am impressed with",
+    "main": ".eleventy.js",
+    "scripts": {
+        "watch:sass": "sass  --no-source-map --watch src/css:public/css",
+        "watch:eleventy": "eleventy --serve",
+        "build:sass": "sass  --no-source-map src/css:public/css",
+        "build:eleventy": "eleventy",
+        "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+        "start": "npm-run-all build:sass --parallel watch:*",
+        "build": "npm-run-all build:sass build:eleventy",
+        "deploy": "npm-run-all build:sass build:eleventy & netlify deploy --prod"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jmnyarega/small-challenges.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jmnyarega/small-challenges/issues"
+    },
+    "homepage": "https://github.com/jmnyarega/small-challenges#readme",
+    "dependencies": {
+        "@11ty/eleventy": "^3.0.0",
+        "autoprefixer": "^10.4.21",
+        "cross-env": "^7.0.3",
+        "cssnano": "^7.0.6",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.5.3",
+        "postcss-cli": "^11.0.1",
+        "sass": "^1.86.0"
+    }
 }

@@ -1,79 +1,106 @@
 {
-  "layout": "base",
-  "title": "Josiah",
-  "favicon": "../images/favicon.png",
-  "style": "../css/home/style.css",
-  "fonts": "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Ubuntu:wght@300;400&display=swap",
-  "links": [
-    {
-      "name": "countdown timer",
-      "description": "This will be a fun one! Your challenge is to build this countdown timer. There are lots of small CSS tests in the design as well. So it should keep you busy!",
-      "value": "./challenges/countdown",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/cqs8urpg9sr4ufvyiw7n.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "Todo app",
-      "description": "The classic todo app with a few twists! This app includes a dark/light theme toggle and drag & drop reordering for anyone wanting an extra test",
-      "value": "./challenges/todo",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto,w_700/Challenges/ty4ppudcq94rtgj4rv6p.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "stats preview",
-      "description": "This is a great small challenge to help get you used to building to a design. There's no JS in this project, so you'll be able to focus on your HTML & CSS skills.",
-      "value": "./challenges/stats-preview-card",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/pnczwsvslfwimxcqjrwm.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "3 Column Card Component",
-      "description": "This challenge is perfect if you're just getting started. The shift between the layouts will be a nice test if you're new to building responsive projects.",
-      "value": "./challenges/three-column-card-component",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ofrkupd8a9wh1wenvr8c.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "FAQ component",
-      "description": "In this challenge, you'll be building out an FAQ accordion. This is an extremely common front-end pattern, so it's a great opportunity to get some practice in!",
-      "value": "./challenges/faq-component",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ymtblmv8bbnpazgrfrx6.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "profile component",
-      "description": "This is a perfect challenge to test your layout skills. The card layout doesn't shift, so it's also great for those that haven't dived into responsive websites yet!",
-      "value": "./challenges/profile-component",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/udlaqeyuqehspxb2zi9h.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "article preview",
-      "description": "Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well.",
-      "value": "./challenges/article-preview",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/xjpdhdjod58zbaaw0fmo.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "bootcamp testimonials",
-      "description": "This challenge will be a nice test if you're new to JavaScript. It's also a great opportunity to play around with content animations and transitions.",
-      "value": "./challenges/bootcamp-testimonials",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/boizahiijgdyynt18v9d.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "signup form",
-      "description": "Practice building out a sign-up form complete with client-side validation using JavaScript.",
-      "value": "./challenges/signup-form",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/cbyamvcsyhwlvnlelr5n.jpg",
-      "tags": ["html", "css", "javascript"]
-    },
-    {
-      "name": "price component",
-      "description": "In this challenge, you will build out the pricing component to the designs provided. This is perfect for beginners and people who want to complete a smaller challenge.",
-      "value": "./challenges/single-price-component",
-      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/etoajz7nokwmphl1jonw.jpg",
-      "tags": ["html", "css", "javascript"]
-    }
-  ]
+    "layout": "base",
+    "title": "Josiah Mokobo",
+    "favicon": "../images/favicon.png",
+    "style": "../css/home/style.css",
+    "fonts": "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Ubuntu:wght@300;400&display=swap",
+    "info": [
+        {
+            "full_name": "Josiah Mokobo Nyarega",
+            "position": "Fullstack Developer",
+            "location": "Nairobi, Kenya"
+        }
+    ],
+    "links": [
+        {
+            "name": "Cable Masters",
+            "description": "",
+            "value": "https://cablemasters.nl/",
+            "image": "https://cablemasters.nl/wp-content/uploads/2023/10/cropped-logo.webp",
+            "tags": [
+                "ReactJs",
+                "Javascript",
+                "PHP",
+                "Wordpress/Divi"
+            ]
+        },
+        {
+            "name": "Nobeach",
+            "description": "",
+            "value": "https://www.nobeach-reizen.nl/",
+            "image": "./images/no-beach.svg",
+            "tags": [
+                "ReactJs",
+                "Javascript",
+                "PHP",
+                "Wordpress/Divi"
+            ]
+        },
+        {
+            "name": "Geefinzicht",
+            "description": "",
+            "value": "http://geefinzicht.nl/",
+            "image": "./images/geef-inzicht.png",
+            "tags": [
+                "Laravel",
+                "javascript",
+                "Wordpress/Bedrock"
+            ]
+        },
+        {
+            "name": "Kentekencheck Search",
+            "description": "",
+            "value": "https://www.kentekencheck.nu/zoek",
+            "image": "./images/kentekencheck-logo-1.png",
+            "tags": [
+                "Laravel",
+                "Typescript",
+                "Elastic Search"
+            ]
+        },
+        {
+            "name": "Wazi",
+            "description": "",
+            "value": "https://www.wazi.co/",
+            "image": "https://static.wixstatic.com/media/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png/v1/fill/w_374,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png",
+            "tags": [
+                "ReactJs",
+                "Typescript",
+                "Laravel"
+            ]
+        },
+        {
+            "name": "Sportways",
+            "description": "",
+            "value": "https://sportways.com/",
+            "image": "./images/sportways-logo.png",
+            "tags": [
+                "Vuejs",
+                "Symfony"
+            ]
+        },
+        {
+            "name": "Quirkycoders",
+            "description": "",
+            "value": "https://www.quirkycoders.com/",
+            "image": "./images/quirkycoders.png",
+            "tags": [
+                "ReactJs",
+                "javascript",
+                "NodeJs"
+            ]
+        },
+        {
+            "name": "Our Giving Board",
+            "description": "",
+            "value": "",
+            "code": "https://github.com/jmnyarega/ourgivingboard-web",
+            "image": "https://media.licdn.com/dms/image/v2/C562DAQHZW2eJoyz70g/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1616702857942?e=1743606000&v=beta&t=PTb0qP5Sgs9HEC1dF1g9zZnK8eSmGqxVsUsA8aMQ2Rs",
+            "tags": [
+                "ReactJs",
+                "javascript",
+                "Ruby"
+            ]
+        }
+    ]
 }
