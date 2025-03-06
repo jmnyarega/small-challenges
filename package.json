@@ -8,7 +8,7 @@
         "watch:eleventy": "eleventy --serve",
         "build:sass": "sass  --no-source-map src/css:public/css",
         "build:eleventy": "eleventy",
-        "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+        "postbuild": "postcss public/css/**/*.css -u autoprefixer cssnano -r --no-map",
         "start": "npm-run-all build:sass --parallel watch:*",
         "build": "npm-run-all build:sass build:eleventy",
         "deploy": "npm-run-all build:sass build:eleventy & netlify deploy --prod"
