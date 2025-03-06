@@ -10,8 +10,8 @@
         "build:eleventy": "eleventy",
         "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
         "start": "npm-run-all build:sass --parallel watch:*",
-        "build": "npx npm-run-all build:sass build:eleventy",
-        "deploy": "npx npm-run-all build:sass build:eleventy & netlify deploy --prod"
+        "build": "npm-run-all build:sass build:eleventy",
+        "deploy": "npm-run-all build:sass build:eleventy & netlify deploy --prod"
     },
     "repository": {
         "type": "git",
