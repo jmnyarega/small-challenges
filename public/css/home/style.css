@@ -255,6 +255,9 @@ img:not([alt]) {
   box-shadow: 0 0 10px 5px hsla(204, 22%, 10%, 0.5);
   justify-self: center;
   border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .project__content, .project__cta, .project__tags {
   padding: 1.5rem;

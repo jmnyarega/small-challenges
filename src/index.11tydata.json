@@ -14,7 +14,7 @@
     "links": [
         {
             "name": "Cable Masters",
-            "description": "",
+            "description": "Provides solutions with which installations in industry, utility and infrastructure can be realized as quickly, safely and efficiently as possible. Cablemaster expertise and dedication go-to partner for safe and reliable installations.",
             "value": "https://cablemasters.nl/",
             "image": "https://cablemasters.nl/wp-content/uploads/2023/10/cropped-logo.webp",
             "tags": [
@@ -26,7 +26,7 @@
         },
         {
             "name": "Nobeach",
-            "description": "",
+            "description": "Nobeach is a Dutch travel agency website that specializes in beach-free vacations. They offer alternative vacation options that do not involve spending time at the beach",
             "value": "https://www.nobeach-reizen.nl/",
             "image": "./images/no-beach.svg",
             "tags": [
@@ -38,7 +38,7 @@
         },
         {
             "name": "Geefinzicht",
-            "description": "",
+            "description": "This platform helps individuals connect with experts who can provide assistance with various health and wellness issues. The website features a diverse group of experts, including therapists, coaches, and healers, who offer guidance and support for a range of topics, from mental health to personal growth.",
             "value": "http://geefinzicht.nl/",
             "image": "./images/geef-inzicht.png",
             "tags": [
@@ -49,7 +49,7 @@
         },
         {
             "name": "Kentekencheck Search",
-            "description": "",
+            "description": "This is vehicle registration check service for the Netherlands. The service allows users to search for information about a specific vehicle by its registration number (kenteken nummer in Dutch). ",
             "value": "https://www.kentekencheck.nu/zoek",
             "image": "./images/kentekencheck-logo-1.png",
             "tags": [
@@ -60,7 +60,7 @@
         },
         {
             "name": "Wazi",
-            "description": "",
+            "description": "The webpage promotes an anonymous digital therapy service that allows users to talk to a certified Kenyan therapist over the phone or through video/audio calls.",
             "value": "https://www.wazi.co/",
             "image": "https://static.wixstatic.com/media/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png/v1/fill/w_374,h_106,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6d419d_9b57d12ddcc64b5e9c4ab35fe68389fd~mv2.png",
             "tags": [
@@ -71,17 +71,18 @@
         },
         {
             "name": "Sportways",
-            "description": "",
+            "description": "SportWays offers a range of hockey camps for players of all ages and skill levels.",
             "value": "https://sportways.com/",
             "image": "./images/sportways-logo.png",
             "tags": [
                 "Vuejs",
-                "Symfony"
+                "Symfony",
+                "Javascript"
             ]
         },
         {
             "name": "Quirkycoders",
-            "description": "",
+            "description": "The project aims to help developers find new career opportunities by providing a platform to search for tech jobs.",
             "value": "https://www.quirkycoders.com/",
             "image": "./images/quirkycoders.png",
             "tags": [
@@ -92,7 +93,7 @@
         },
         {
             "name": "Our Giving Board",
-            "description": "",
+            "description": "The platform enables users to contribute funds in an help each other in turns",
             "value": "",
             "code": "https://github.com/jmnyarega/ourgivingboard-web",
             "image": "https://media.licdn.com/dms/image/v2/C562DAQHZW2eJoyz70g/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1616702857942?e=1743606000&v=beta&t=PTb0qP5Sgs9HEC1dF1g9zZnK8eSmGqxVsUsA8aMQ2Rs",
