@@ -1,4 +1,4 @@
-.projects {
+.projects, .blogs {
 
   &__title {
     font-family: $ff-alt;
@@ -6,6 +6,7 @@
     margin-bottom: 2rem;
     position: relative;
     width: max-content;
+    margin-top: 3rem;
 
     &::after {
       content: "";

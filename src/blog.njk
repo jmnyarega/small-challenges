@@ -1,0 +1,28 @@
+<main>
+  <article class="projects u-container" id="projects">
+    <h2 class="blogs__title">Blogs</h2>
+    <ul class="projects__items">
+      {%- for blog in blogs -%}
+      <li class="projects__item project">
+
+      <div class="project__content">
+          <p class="project__description">{{ blog.excerpt }}</p>
+        </div>
+
+        <div class="project__tags">
+          {%- for tag in blog.tags -%}
+          <span class="project__tag">{{ tag }}</span>
+          {%- endfor -%}
+        </div>
+
+        <div class="project__cta">
+          {% if(blog.url) %}
+              <a target="_blank" href="{{ blog.url }}" class="project__open">Read More</a>
+          {% endif %}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </article>
+
+</main>

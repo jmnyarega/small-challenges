@@ -1,33 +1,20 @@
-<header class="header u-container">
-  <img
-    class="header__logo"
-    src="./images/josiah.png"
-    alt="Josiah's Portfolio - Home"
-    width="64px"
-  />
-  <input type="checkbox" id="toggle" />
-  <label for="toggle" class="hamburger">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-  </label>
-  <nav class="nav u-container">
-    <ul class="nav__items">
-      <li class="nav__item">
-        <a class="nav__link" href="#projets">projects</a>
-      </li>
-      <li class="nav__item"><a class="nav__link" href="#0">blogs</a></li>
-      <li class="nav__item"><a class="nav__link" href="#0">contact</a></li>
-      <li class="nav__item"><a class="nav__link" href="#0">credits</a></li>
-    </ul>
-  </nav>
-</header>
+
 <main>
   <section class="hero u-container">
-    <h1 class="hero__title">Josiah Mokobo Nyarega</h1>
+    <h1 class="hero__title">{{ info.full_name }}</h1>
     <div class="address">
-      <p class="address__title">Full stack developer</p>
-      <address class="address__address">Nairobi, Kenya</address>
+      <p class="address__title">{{ info.position }}</p>
+      <address class="address__address">{{ info.location }}</address>
+        <ul class="contact-info">
+          {%- for media in info.socialmedia  -%}
+            <li>
+                <a target="_blank" href="{{ media.url }}">
+                    {{media.name}}
+                    <img height="20" with="32" src="{{ media.logo }}" alt="{{media.name}}" />
+                </a>
+            </li>
+          {%- endfor -%}
+        </ul>
     </div>
   </section>
   <article class="projects u-container" id="projects">
@@ -66,7 +53,3 @@
   </article>
 </main>
 
-<footer>
-  {{ title }}
-  &copy; build with eleventy
-</footer>

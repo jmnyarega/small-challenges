@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,39 +10,51 @@
     <link rel="stylesheet" href="../css/home/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&amp;family=Ubuntu:wght@300;400&amp;display=swap" rel="stylesheet" />
-  </head>
-  <body>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
     <header class="header u-container">
-  <img
-    class="header__logo"
-    src="./images/josiah.png"
-    alt="Josiah's Portfolio - Home"
-    width="64px"
-  />
-  <input type="checkbox" id="toggle" />
-  <label for="toggle" class="hamburger">
-    <span class="top"></span>
-    <span class="middle"></span>
-    <span class="bottom"></span>
-  </label>
-  <nav class="nav u-container">
-    <ul class="nav__items">
-      <li class="nav__item">
-        <a class="nav__link" href="#projets">projects</a>
-      </li>
-      <li class="nav__item"><a class="nav__link" href="#0">blogs</a></li>
-      <li class="nav__item"><a class="nav__link" href="#0">contact</a></li>
-      <li class="nav__item"><a class="nav__link" href="#0">credits</a></li>
-    </ul>
-  </nav>
-</header>
+        <a href="/">
+            <img class="header__logo" src="../images/josiah.png" alt="Josiah's Portfolio - Home" width="64px" />
+        </a>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="hamburger">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </label>
+        <nav class="nav u-container">
+            <ul class="nav__items">
+                <li class="nav__item"><a class="nav__link" href="/blog">blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+    
 <main>
   <section class="hero u-container">
     <h1 class="hero__title">Josiah Mokobo Nyarega</h1>
     <div class="address">
-      <p class="address__title">Full stack developer</p>
+      <p class="address__title">Fullstack Developer</p>
       <address class="address__address">Nairobi, Kenya</address>
+        <ul class="contact-info"><li>
+                <a target="_blank" href="https://www.linkedin.com/in/josiah-n-84820a103/">
+                    linkedin
+                    <img height="20" with="32" src="./images/linkedin.svg" alt="linkedin" />
+                </a>
+            </li><li>
+                <a target="_blank" href="https://stackoverflow.com/users/8013307/josiah-nyarega">
+                    Stack Overflow
+                    <img height="20" with="32" src="./images/stack-overflow.svg" alt="Stack Overflow" />
+                </a>
+            </li><li>
+                <a target="_blank" href="https://github.com/jmnyarega">
+                    Github
+                    <img height="20" with="32" src="./images/github.svg" alt="Github" />
+                </a>
+            </li></ul>
     </div>
   </section>
   <article class="projects u-container" id="projects">
@@ -210,10 +223,11 @@
   </article>
 </main>
 
-<footer>
-  Josiah Mokobo
-  &copy; build with eleventy
-</footer>
 
-  </body>
+    <footer class="center">
+        Josiah Mokobo
+        &copy; build with eleventy
+    </footer>
+</body>
+
 </html>
