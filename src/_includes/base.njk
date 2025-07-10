@@ -2,41 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title | slug }}</title>
-    <link rel="icon" href="../images/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="../css/home/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Ubuntu:wght@300;400&display=swap"
-        rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title | slug }}</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/home/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Ubuntu:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WFGNLGDH');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <header class="header u-container">
-        <a href="/">
-            <img class="header__logo" src="../images/josiah.png" alt="Josiah's Portfolio - Home" width="64px" />
-        </a>
-        <input type="checkbox" id="toggle" />
-        <label for="toggle" class="hamburger">
-            <span class="top"></span>
-            <span class="middle"></span>
-            <span class="bottom"></span>
-        </label>
-        <nav class="nav u-container">
-            <ul class="nav__items">
-                <li class="nav__item"><a class="nav__link" href="/blog">blogs</a></li>
-            </ul>
-        </nav>
-    </header>
-    {{ content | safe }}
-    <footer class="center">
-        {{ title }}
-        &copy; build with eleventy
-    </footer>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFGNLGDH" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="header u-container">
+    <a href="/">
+      <img class="header__logo" src="../images/josiah.png" alt="Josiah's Portfolio - Home" width="64px" />
+    </a>
+    <input type="checkbox" id="toggle" />
+    <label for="toggle" class="hamburger">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </label>
+    <nav class="nav u-container">
+      <ul class="nav__items">
+        <li class="nav__item"><a class="nav__link" href="/blog">blogs</a></li>
+      </ul>
+    </nav>
+  </header>
+  {{ content | safe }}
+  <footer class="center">
+    {{ title }}
+    &copy; build with eleventy
+  </footer>
 </body>
 
 </html>
