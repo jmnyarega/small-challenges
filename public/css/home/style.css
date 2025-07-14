@@ -237,9 +237,7 @@ img:not([alt]) {
   left: 0;
   right: 0;
 }
-.projects__item, .blogs__item {
-  width: 34ch;
-}
+
 @media (min-width: 40rem) {
   .projects__item, .blogs__item {
     width: 50ch;
